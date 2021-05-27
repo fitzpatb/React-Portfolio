@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p class="white">Copyright Brett Fitzpatrick 2021</p>
+      <p className="white">Copyright Brett Fitzpatrick 2021</p>
     </footer>
   )
 }

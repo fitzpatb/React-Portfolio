@@ -4,12 +4,12 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
+import Portfolios from "./pages/Portfolios";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div id="page-container">
         <Nav />
         <Route exact path="/">
           <Home />
@@ -18,7 +18,7 @@ function App() {
           <Contact />
         </Route>
         <Route exact path="/portfolio">
-          <Portfolio />
+          <Portfolios />
         </Route>
         <Footer />
       </div>
