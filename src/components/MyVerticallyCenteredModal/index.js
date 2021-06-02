@@ -12,19 +12,32 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {props.modal.title}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-6" id="modal-pic">
+              <img className="project-pic" src={props.modal.image} alt={props.modal.alt}></img>
+            </div>
+            <div className="col-6" id="modal-content">
+              <ul>Description
+                <li id="modal-description">{props.modal.description}</li>
+              </ul>
+              <ul>Contributions
+                <li id="modal-contributions">{props.modal.contributions}</li>
+              </ul>
+              <ul>Technologies
+                <li id="modal-technologies">{props.modal.technologies}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
+        <Button href={props.modal.website}>See Website</Button>
       </Modal.Footer>
     </Modal>
   );

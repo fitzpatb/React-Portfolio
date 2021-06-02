@@ -118,7 +118,7 @@ li {
 
 #modal-content {
   overflow:scroll;
-  height: 48vh;
+  min-height: 250px;
 }
 
 a, a:hover {
